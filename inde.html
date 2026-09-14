@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Will The Real Men Please Stand Up — Men of CTBT</title>
+<meta name="description" content="Will The Real Men Please Stand Up — the Men's Ministry of Chosen To Be Transparent Church. Tuesday 5AM Zoom formation, the Mantle of Manhood, prayer backup, and events.">
+<meta name="theme-color" content="#0d0000">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Real Men">
+<link rel="icon" type="image/jpeg" href="images/rm-logo.jpeg">
+<link rel="apple-touch-icon" href="images/rm-logo.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#000000;
+    --panel:#141416;
+    --steel:#2e3238;
+    --red:#b00000;
+    --crimson:#c8102e;
+    --white:#f2f2ef;
+    --gray:#b9bec6;
+    --dim:#7d838c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+  body{
+    background:var(--black);
+    color:var(--white);
+    font-family:'Barlow',Arial,sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    padding-bottom:76px; /* room for bottom nav */
+  }
+  img{max-width:100%;display:block;}
+  a{color:var(--crimson);}
+
+  /* ---------- type ---------- */
+  .stencil{
+    font-family:'Black Ops One',Arial,sans-serif;
+    font-weight:400;
+    letter-spacing:.03em;
+    line-height:1.15;
+    text-transform:uppercase;
+  }
+  .label{
+    font-family:'Barlow Condensed',Arial,sans-serif;
+    font-weight:600;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-size:.85rem;
+    color:var(--crimson);
+  }
+  h2.stencil{font-size:clamp(1.6rem,5.5vw,2.4rem);}
+  h3{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:700;font-size:1.35rem;letter-spacing:.02em;}
+
+  /* rank-stripe divider */
+  .stripes{display:flex;gap:5px;margin:14px 0 22px;}
+  .stripes span{height:4px;background:var(--red);}
+  .stripes span:nth-child(1){width:44px;}
+  .stripes span:nth-child(2){width:22px;}
+  .stripes span:nth-child(3){width:10px;background:var(--crimson);}
+
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px;}
+  section{padding:64px 0;border-bottom:1px solid #1c1e21;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    padding:52px 0 60px;
+    text-align:center;
+    border-bottom:1px solid #1c1e21;
+    background:
+      radial-gradient(ellipse 90% 60% at 50% -10%, rgba(176,0,0,.28), transparent 60%),
+      var(--black);
+  }
+  .hero img.seal{width:min(300px,70vw);margin:0 auto 26px;filter:drop-shadow(0 10px 40px rgba(176,0,0,.35));}
+  .hero h1{font-size:clamp(1.7rem,6.5vw,2.9rem);}
+  .hero h1 .line-red{color:var(--crimson);}
+  .mandate{
+    margin:16px auto 6px;
+    font-family:'Barlow Condensed',Arial,sans-serif;
+    font-weight:600;font-size:1.15rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gray);
+  }
+  .verse{max-width:520px;margin:22px auto 0;color:var(--gray);font-style:italic;}
+  .verse cite{display:block;margin-top:6px;font-style:normal;color:var(--dim);font-size:.9rem;}
+
+  /* muster card */
+  .muster{
+    margin:36px auto 0;max-width:560px;
+    background:var(--panel);
+    border:1px solid var(--steel);
+    border-top:4px solid var(--red);
+    padding:26px 22px;
+    text-align:center;
+  }
+  .muster .time{font-family:'Black Ops One',Arial,sans-serif;font-size:2.2rem;color:var(--white);}
+  .muster .time small{font-size:1rem;color:var(--gray);font-family:'Barlow Condensed',Arial,sans-serif;letter-spacing:.1em;}
+  .btn{
+    display:inline-block;margin-top:16px;
+    background:var(--red);color:var(--white);text-decoration:none;
+    font-family:'Barlow Condensed',Arial,sans-serif;font-weight:700;font-size:1.1rem;
+    letter-spacing:.12em;text-transform:uppercase;
+    padding:14px 34px;border:none;cursor:pointer;
+  }
+  .btn:hover{background:var(--crimson);}
+  .btn.ghost{background:transparent;border:2px solid var(--steel);color:var(--white);}
+  .btn.ghost:hover{border-color:var(--crimson);color:var(--crimson);}
+  .hint{margin-top:12px;font-size:.9rem;color:var(--dim);}
+
+  .homescreen{
+    margin:26px auto 0;max-width:560px;font-size:.92rem;color:var(--dim);
+    border:1px dashed var(--steel);padding:12px 16px;
+  }
+  .homescreen b{color:var(--gray);}
+
+  /* ---------- movement ---------- */
+  .acro{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:700;font-size:1.15rem;letter-spacing:.06em;margin:10px 0 4px;}
+  .acro b{color:var(--crimson);}
+  .factline{display:grid;grid-template-columns:110px 1fr;gap:6px 18px;margin-top:22px;}
+  .factline dt{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);font-size:.9rem;padding-top:2px;}
+  .factline dd{color:var(--gray);}
+  .declaration{
+    margin-top:28px;padding:22px;background:var(--panel);border-left:4px solid var(--red);
+    color:var(--gray);
+  }
+  .declaration p{margin-bottom:8px;}
+  .declaration .stencil{color:var(--white);font-size:1.05rem;margin-bottom:12px;}
+
+  .pillars{list-style:none;margin-top:24px;counter-reset:pillar;}
+  .pillars li{
+    counter-increment:pillar;
+    display:flex;align-items:baseline;gap:14px;
+    padding:12px 0;border-bottom:1px solid #1c1e21;
+    font-family:'Barlow Condensed',Arial,sans-serif;font-weight:600;font-size:1.15rem;letter-spacing:.04em;
+  }
+  .pillars li::before{
+    content:"▲";
+    color:var(--red);font-size:.7rem;transform:translateY(-1px);
+  }
+
+  /* ---------- founder ---------- */
+  .founder{display:flex;flex-direction:column;gap:18px;}
+  .founder .name{font-size:1.3rem;}
+  .founder .role{color:var(--dim);font-family:'Barlow Condensed',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;font-size:.9rem;}
+  .founder p{color:var(--gray);margin-top:12px;}
+
+  /* ---------- formation ---------- */
+  .card{
+    background:var(--panel);border:1px solid var(--steel);padding:24px 22px;margin-top:22px;
+  }
+  .card .when{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--crimson);font-size:.95rem;}
+  .card h3{margin-top:6px;}
+  .card p{color:var(--gray);margin-top:10px;}
+  .habits{list-style:none;margin-top:14px;}
+  .habits li{padding:8px 0;border-bottom:1px solid #1c1e21;color:var(--gray);display:flex;gap:12px;align-items:baseline;}
+  .habits li .rn{font-family:'Black Ops One',Arial,sans-serif;color:var(--steel);font-size:.85rem;min-width:2em;}
+  .habits li.done .rn{color:var(--red);}
+
+  /* ---------- backup / forms ---------- */
+  form{margin-top:22px;display:flex;flex-direction:column;gap:14px;}
+  input,textarea,select{
+    background:var(--black);border:1px solid var(--steel);color:var(--white);
+    font-family:'Barlow',Arial,sans-serif;font-size:1rem;padding:12px 14px;width:100%;
+  }
+  input:focus,textarea:focus,select:focus{outline:2px solid var(--crimson);outline-offset:1px;}
+  textarea{min-height:120px;resize:vertical;}
+  .fineprint{font-size:.88rem;color:var(--dim);}
+
+  /* ---------- hub ---------- */
+  .event{display:flex;gap:18px;margin-top:26px;}
+  .datechip{
+    min-width:70px;text-align:center;background:var(--panel);border:1px solid var(--steel);
+    padding:10px 6px;height:fit-content;
+  }
+  .datechip .mo{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--crimson);font-size:.85rem;}
+  .datechip .day{font-family:'Black Ops One',Arial,sans-serif;font-size:1.5rem;}
+  .event .body h3{margin-bottom:6px;}
+  .event .body p{color:var(--gray);}
+  .speakers{margin-top:8px;font-size:.95rem;color:var(--dim);}
+
+  .bookrow{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px;}
+
+  .connect-item{margin-top:26px;}
+  .connect-item p{color:var(--gray);}
+  address{font-style:normal;color:var(--gray);}
+
+  footer{
+    padding:44px 20px 34px;text-align:center;color:var(--dim);font-size:.9rem;
+  }
+
+  /* ---------- bottom nav ---------- */
+  nav.bottom{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;
+    background:#0a0a0b;border-top:1px solid var(--steel);
+    display:flex;justify-content:space-around;
+    padding:10px 4px calc(10px + env(safe-area-inset-bottom));
+  }
+  nav.bottom a{
+    color:var(--gray);text-decoration:none;
+    font-family:'Barlow Condensed',Arial,sans-serif;font-weight:600;font-size:.82rem;
+    letter-spacing:.08em;text-transform:uppercase;
+    display:flex;flex-direction:column;align-items:center;gap:3px;
+  }
+  nav.bottom a .tick{width:18px;height:3px;background:var(--steel);}
+  nav.bottom a:hover{color:var(--white);}
+  nav.bottom a:hover .tick{background:var(--red);}
+
+  @media(min-width:700px){
+    .founder{flex-direction:row;align-items:flex-start;gap:32px;}
+    .founder>div{flex:1;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="home">
+  <div class="wrap">
+    <img class="seal" src="images/rm-logo.jpeg" alt="Real Men seal — Will The Real Men Please Stand Up">
+    <h1 class="stencil">Will The <span class="line-red">Real Men</span><br>Please Stand Up</h1>
+    <p class="mandate">Male by birth &nbsp;·&nbsp; Man by choice</p>
+    <p class="verse">&ldquo;Watch ye, stand fast in the faith, quit you like men, be strong.&rdquo;
+      <cite>1 Corinthians 16:13 (KJV)</cite>
+    </p>
+
+    <div class="muster">
+      <p class="label">Every Tuesday — Men's Zoom Formation</p>
+      <p class="time">0500 <small>CST</small></p>
+      <p style="color:var(--gray);margin-top:6px;">Will The Real Men Please Stand Up — weekly teaching &amp; brotherhood, led by Apostle Calvin Miller.</p>
+      <a class="btn" href="ZOOM_LINK_HERE">Fall In — Join the Zoom</a>
+      <p class="hint">One tap opens the Zoom call. Set your alarm, brother — formation starts on time.</p>
+    </div>
+
+    <p class="homescreen"><b>Put Real Men on your home screen:</b> tap your browser's Share button, then choose <b>&ldquo;Add to Home Screen.&rdquo;</b> Opens full-screen like an app — no app store needed.</p>
+  </div>
+</header>
+
+<!-- ============ THE MOVEMENT ============ -->
+<section id="movement">
+  <div class="wrap">
+    <p class="label">About the Ministry</p>
+    <h2 class="stencil">The Movement</h2>
+    <div class="stripes"><span></span><span></span><span></span></div>
+
+    <p style="color:var(--gray);">Will The Real Men Please Stand Up is the men's ministry of Chosen To Be Transparent Church — a brotherhood built to raise responsible, spiritually grounded, emotionally healthy, purpose-driven men who strengthen their families, their church, and their community.</p>
+
+    <p class="acro" style="margin-top:18px;">Male by birth. <b>Man by choice.</b> Manhood by development.</p>
+
+    <dl class="factline">
+      <dt>Led by</dt><dd>Apostle Calvin Miller, Chosen To Be Transparent Church</dd>
+      <dt>Mission</dt><dd>Reinforce families. Restore accountability. Awaken what God placed inside every man.</dd>
+      <dt>Vision</dt><dd>Men walking in identity, integrity, and legacy through teaching, brotherhood, and accountability.</dd>
+    </dl>
+
+    <div class="declaration">
+      <p class="stencil">This is not a club. It's a commissioning.</p>
+      <p>We are not here to tell men everything that's wrong with them.</p>
+      <p>We are here to awaken what God placed inside them.</p>
+      <p>Real men don't just show up — they stand up.</p>
+    </div>
+
+    <h3 style="margin-top:34px;">The Seven Pillars</h3>
+    <ul class="pillars">
+      <li>Identity</li>
+      <li>Integrity</li>
+      <li>Accountability</li>
+      <li>Emotional Strength</li>
+      <li>Respect &amp; Relationships</li>
+      <li>Leadership &amp; Service</li>
+      <li>Legacy &amp; Life Readiness</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ THE FOUNDER ============ -->
+<section id="founder">
+  <div class="wrap">
+    <p class="label">About the Founder</p>
+    <h2 class="stencil">The Man Behind the Mandate</h2>
+    <div class="stripes"><span></span><span></span><span></span></div>
+
+    <div class="founder">
+      <div>
+        <p class="name stencil">Apostle Calvin R. Miller Sr.</p>
+        <p class="role">Founder · Senior Leader, Chosen To Be Transparent Church</p>
+        <p>Apostle Calvin Miller is a husband, father, U.S. Navy veteran, author, and entrepreneur. He leads Chosen To Be Transparent Church and 1Team1Fight Ministries in Houston, Texas, and carries a mandate to see men stop hiding, stop shrinking, and stand up into the mantle of manhood God assigned them.</p>
+        <p>He is the author of <em>The Real Man's Path: Male By Birth, Man By Choice — The Mantle of Manhood</em> and its companion 30-day journal, and he teaches men every Tuesday morning at 5AM — because real men report for duty before the world wakes up.</p>
+        <p>He is married to Pastor Helen Miller, founder of She SOARS Women's Ministry, and together they model faith, resilience, and purpose in life and legacy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORMATION (teaching) ============ -->
+<section id="formation">
+  <div class="wrap">
+    <p class="label">Weekly Training</p>
+    <h2 class="stencil">Formation</h2>
+    <div class="stripes"><span></span><span></span><span></span></div>
+
+    <div class="card">
+      <p class="when">Every Tuesday · 5:00 AM CST · Zoom</p>
+      <h3>Will The Real Men Please Stand Up</h3>
+      <p>The weekly men's formation: Word, teaching, and straight talk between brothers. Come as you are — leave standing taller.</p>
+      <a class="btn" href="ZOOM_LINK_HERE">Join the Zoom</a>
+    </div>
+
+    <div class="card">
+      <p class="when">Current Series · Nehemiah 6</p>
+      <h3>Prior Engagements: The Five Habits of Faith</h3>
+      <p>Nehemiah refused to come down from the wall — &ldquo;I am doing a great work, so that I cannot come down.&rdquo; Five habits that keep a man on his wall when distraction comes calling.</p>
+      <ul class="habits">
+        <li class="done"><span class="rn">I</span> Focus — the great work outranks the invitation</li>
+        <li class="done"><span class="rn">II</span> Discernment — reading Gashmu before you answer him</li>
+        <li class="done"><span class="rn">III</span> Prayer — strengthen my hands, O God</li>
+        <li class="done"><span class="rn">IV</span> Courage — should a man like me flee?</li>
+        <li><span class="rn">V</span> Finishing — the wall gets completed</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BACKUP (prayer + testimony) ============ -->
+<section id="backup">
+  <div class="wrap">
+    <p class="label">We Will Stand With You</p>
+    <h2 class="stencil">Request Backup</h2>
+    <div class="stripes"><span></span><span></span><span></span></div>
+
+    <p style="color:var(--gray);">No man fights alone. Your request goes directly and privately to Apostle Miller and the men's leadership — not to a public list. Leave your name blank if you prefer.</p>
+
+    <form id="prayerForm">
+      <input type="text" id="pName" placeholder="Your Name (optional)" autocomplete="name">
+      <input type="tel" id="pPhone" placeholder="Phone (optional, if you'd like a call or text)" autocomplete="tel">
+      <textarea id="pRequest" placeholder="Your prayer request — what are you standing against?" required></textarea>
+      <button type="submit" class="btn">Send My Request</button>
+      <p class="fineprint">Sends through your email app, straight to the men's leadership. Confidential — leaders only.</p>
+    </form>
+
+    <div style="margin-top:52px;">
+      <p class="label">Testimonies</p>
+      <h3>Battle Reports — God Did It, Tell It</h3>
+      <p style="color:var(--gray);margin-top:10px;">&ldquo;And they overcame him by the blood of the Lamb, and by the word of their testimony&rdquo; — Revelation 12:11. Brother, your report from the front line may be exactly what another man needs to keep standing.</p>
+      <form id="testimonyForm">
+        <input type="text" id="tName" placeholder="Your Name (optional)" autocomplete="name">
+        <textarea id="tStory" placeholder="Your testimony — big or small, He gets the glory" required></textarea>
+        <button type="submit" class="btn ghost">File the Report</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE HUB ============ -->
+<section id="hub">
+  <div class="wrap">
+    <p class="label">Announcements &amp; Events</p>
+    <h2 class="stencil">The Hub</h2>
+    <div class="stripes"><span></span><span></span><span></span></div>
+
+    <div class="event">
+      <div class="datechip"><p class="mo">Every</p><p class="day">Tue</p></div>
+      <div class="body">
+        <h3>Men's Zoom Formation — 5:00 AM CST</h3>
+        <p>Weekly teaching and brotherhood. One tap from the home screen joins the call.</p>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="datechip"><p class="mo">Oct</p><p class="day">2–4</p></div>
+      <div class="body">
+        <h3>Men's Retreat — The Mantle of Manhood</h3>
+        <p><strong>October 2–4, 2026 · Lake Conroe area</strong><br>
+        Male By Birth, Man By Choice. Three days of teaching, brotherhood, and commissioning. Come ready to be sharpened — &ldquo;iron sharpeneth iron; so a man sharpeneth the countenance of his friend.&rdquo;</p>
+        <p class="speakers">With Apostle Calvin Miller · Pastor Broderick James · Pastor Derrick Branch · Pastor Michael Johnson Jr.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:52px;">
+      <p class="label">The Armory</p>
+      <h3>Gear for the Standing Man</h3>
+
+      <div class="card">
+        <h3>The Real Man's Path</h3>
+        <p><em>Male By Birth, Man By Choice — The Mantle of Manhood</em> by Calvin R. Miller Sr. Twenty chapters that walk a man from excuse to assignment, each one ending with a &ldquo;Walk It Out&rdquo; step into the companion journal.</p>
+        <div class="bookrow">
+          <a class="btn" href="https://www.amazon.com/dp/B0HGR551LN">Paperback on Amazon</a>
+          <a class="btn ghost" href="https://www.amazon.com/dp/B0HJB4K1PT">Kindle Edition</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>The Real Man's Path — 30-Day Journal</h3>
+        <p>Thirty days of standing orders: reflection, Scripture, and accountability in print. The training ground that pairs with the book.</p>
+        <p class="fineprint" style="margin-top:10px;">Amazon link coming soon — ask a brother on the Tuesday call.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:52px;" id="connect">
+      <p class="label">Stay Connected</p>
+      <h3>Base Camp</h3>
+
+      <div class="connect-item">
+        <h3 style="font-size:1.1rem;">Email Us</h3>
+        <p>Questions, testimonies, or a brother who needs this ministry — reach out.</p>
+        <p><a href="mailto:REPLACE_WITH_EMAIL">REPLACE_WITH_EMAIL</a></p>
+      </div>
+
+      <div class="connect-item">
+        <h3 style="font-size:1.1rem;">Mailing Address</h3>
+        <address>
+          Will The Real Men Please Stand Up — Men's Ministry<br>
+          Chosen To Be Transparent Church<br>
+          9001 Airport Blvd., Suite 208<br>
+          Houston, TX 77061
+        </address>
+        <p style="margin-top:8px;"><a href="https://maps.google.com/?q=9001+Airport+Blvd+Suite+208+Houston+TX+77061">Open in Maps</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Chosen To Be Transparent Church &nbsp;·&nbsp; 1Team1Fight Ministries<br>
+  Will The Real Men Please Stand Up — Male by birth. Man by choice.
+</footer>
+
+<nav class="bottom" aria-label="Site sections">
+  <a href="#home"><span class="tick"></span>Home</a>
+  <a href="#movement"><span class="tick"></span>Movement</a>
+  <a href="#formation"><span class="tick"></span>Formation</a>
+  <a href="#backup"><span class="tick"></span>Backup</a>
+  <a href="#hub"><span class="tick"></span>The Hub</a>
+</nav>
+
+<script>
+  // Prayer + testimony forms open a pre-filled email (works on GitHub Pages, no form service needed).
+  var MINISTRY_EMAIL = "REPLACE_WITH_EMAIL";
+
+  function sendMail(subject, body){
+    window.location.href = "mailto:" + MINISTRY_EMAIL +
+      "?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(body);
+  }
+
+  document.getElementById("prayerForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    var name = document.getElementById("pName").value || "A brother";
+    var phone = document.getElementById("pPhone").value;
+    var req = document.getElementById("pRequest").value;
+    sendMail("Prayer Request — Real Men",
+      "Name: " + name + "\n" + (phone ? "Phone: " + phone + "\n" : "") + "\nRequest:\n" + req);
+  });
+
+  document.getElementById("testimonyForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    var name = document.getElementById("tName").value || "A brother";
+    var story = document.getElementById("tStory").value;
+    sendMail("Battle Report (Testimony) — Real Men",
+      "Name: " + name + "\n\nTestimony:\n" + story);
+  });
+</script>
+
+</body>
+</html>

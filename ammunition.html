@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Ammunition — Scripture for the Fight | Will The Real Men Please Stand Up</title>
+<meta name="description" content="Scripture organized by the battle: temptation, anger, fear, finances, fatherhood, grief, addiction, isolation — plus crisis lifelines.">
+<meta name="theme-color" content="#0d0000">
+<link rel="icon" type="image/jpeg" href="rm-logo.jpeg">
+<link rel="apple-touch-icon" href="rm-logo.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#000000;
+    --panel:#141416;
+    --steel:#2e3238;
+    --red:#b00000;
+    --crimson:#c8102e;
+    --white:#f2f2ef;
+    --gray:#b9bec6;
+    --dim:#7d838c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+  body{
+    background:var(--black);
+    color:var(--white);
+    font-family:'Barlow',Arial,sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    padding-bottom:76px; /* room for bottom nav */
+  }
+  img{max-width:100%;display:block;}
+  a{color:var(--crimson);}
+
+  /* ---------- type ---------- */
+  .stencil{
+    font-family:'Black Ops One',Arial,sans-serif;
+    font-weight:400;
+    letter-spacing:.03em;
+    line-height:1.15;
+    text-transform:uppercase;
+  }
+  .label{
+    font-family:'Barlow Condensed',Arial,sans-serif;
+    font-weight:600;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-size:.85rem;
+    color:var(--crimson);
+  }
+  h2.stencil{font-size:clamp(1.6rem,5.5vw,2.4rem);}
+  h3{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:700;font-size:1.35rem;letter-spacing:.02em;}
+
+  /* rank-stripe divider */
+  .stripes{display:flex;gap:5px;margin:14px 0 22px;}
+  .stripes span{height:4px;background:var(--red);}
+  .stripes span:nth-child(1){width:44px;}
+  .stripes span:nth-child(2){width:22px;}
+  .stripes span:nth-child(3){width:10px;background:var(--crimson);}
+
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px;}
+  section{padding:64px 0;border-bottom:1px solid #1c1e21;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    padding:52px 0 60px;
+    text-align:center;
+    border-bottom:1px solid #1c1e21;
+    background:
+      radial-gradient(ellipse 90% 60% at 50% -10%, rgba(176,0,0,.28), transparent 60%),
+      var(--black);
+  }
+  .hero img.seal{width:min(300px,70vw);margin:0 auto 26px;filter:drop-shadow(0 10px 40px rgba(176,0,0,.35));}
+  .hero h1{font-size:clamp(1.7rem,6.5vw,2.9rem);}
+  .hero h1 .line-red{color:var(--crimson);}
+  .mandate{
+    margin:16px auto 6px;
+    font-family:'Barlow Condensed',Arial,sans-serif;
+    font-weight:600;font-size:1.15rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gray);
+  }
+  .verse{max-width:520px;margin:22px auto 0;color:var(--gray);font-style:italic;}
+  .verse cite{display:block;margin-top:6px;font-style:normal;color:var(--dim);font-size:.9rem;}
+
+  /* muster card */
+  .muster{
+    margin:36px auto 0;max-width:560px;
+    background:var(--panel);
+    border:1px solid var(--steel);
+    border-top:4px solid var(--red);
+    padding:26px 22px;
+    text-align:center;
+  }
+  .muster .time{font-family:'Black Ops One',Arial,sans-serif;font-size:2.2rem;color:var(--white);}
+  .muster .time small{font-size:1rem;color:var(--gray);font-family:'Barlow Condensed',Arial,sans-serif;letter-spacing:.1em;}
+  .btn{
+    display:inline-block;margin-top:16px;
+    background:var(--red);color:var(--white);text-decoration:none;
+    font-family:'Barlow Condensed',Arial,sans-serif;font-weight:700;font-size:1.1rem;
+    letter-spacing:.12em;text-transform:uppercase;
+    padding:14px 34px;border:none;cursor:pointer;
+  }
+  .btn:hover{background:var(--crimson);}
+  .btn.ghost{background:transparent;border:2px solid var(--steel);color:var(--white);}
+  .btn.ghost:hover{border-color:var(--crimson);color:var(--crimson);}
+  .hint{margin-top:12px;font-size:.9rem;color:var(--dim);}
+
+  .homescreen{
+    margin:26px auto 0;max-width:560px;font-size:.92rem;color:var(--dim);
+    border:1px dashed var(--steel);padding:12px 16px;
+  }
+  .homescreen b{color:var(--gray);}
+
+  /* ---------- movement ---------- */
+  .acro{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:700;font-size:1.15rem;letter-spacing:.06em;margin:10px 0 4px;}
+  .acro b{color:var(--crimson);}
+  .factline{display:grid;grid-template-columns:110px 1fr;gap:6px 18px;margin-top:22px;}
+  .factline dt{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);font-size:.9rem;padding-top:2px;}
+  .factline dd{color:var(--gray);}
+  .declaration{
+    margin-top:28px;padding:22px;background:var(--panel);border-left:4px solid var(--red);
+    color:var(--gray);
+  }
+  .declaration p{margin-bottom:8px;}
+  .declaration .stencil{color:var(--white);font-size:1.05rem;margin-bottom:12px;}
+
+  .pillars{list-style:none;margin-top:24px;counter-reset:pillar;}
+  .pillars li{
+    counter-increment:pillar;
+    display:flex;align-items:baseline;gap:14px;
+    padding:12px 0;border-bottom:1px solid #1c1e21;
+    font-family:'Barlow Condensed',Arial,sans-serif;font-weight:600;font-size:1.15rem;letter-spacing:.04em;
+  }
+  .pillars li::before{
+    content:"▲";
+    color:var(--red);font-size:.7rem;transform:translateY(-1px);
+  }
+
+  /* ---------- founder ---------- */
+  .founder{display:flex;flex-direction:column;gap:18px;}
+  .founder .name{font-size:1.3rem;}
+  .founder .role{color:var(--dim);font-family:'Barlow Condensed',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;font-size:.9rem;}
+  .founder p{color:var(--gray);margin-top:12px;}
+
+  /* ---------- formation ---------- */
+  .card{
+    background:var(--panel);border:1px solid var(--steel);padding:24px 22px;margin-top:22px;
+  }
+  .card .when{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--crimson);font-size:.95rem;}
+  .card h3{margin-top:6px;}
+  .card p{color:var(--gray);margin-top:10px;}
+  .habits{list-style:none;margin-top:14px;}
+  .habits li{padding:8px 0;border-bottom:1px solid #1c1e21;color:var(--gray);display:flex;gap:12px;align-items:baseline;}
+  .habits li .rn{font-family:'Black Ops One',Arial,sans-serif;color:var(--steel);font-size:.85rem;min-width:2em;}
+  .habits li.done .rn{color:var(--red);}
+
+  /* ---------- backup / forms ---------- */
+  form{margin-top:22px;display:flex;flex-direction:column;gap:14px;}
+  input,textarea,select{
+    background:var(--black);border:1px solid var(--steel);color:var(--white);
+    font-family:'Barlow',Arial,sans-serif;font-size:1rem;padding:12px 14px;width:100%;
+  }
+  input:focus,textarea:focus,select:focus{outline:2px solid var(--crimson);outline-offset:1px;}
+  textarea{min-height:120px;resize:vertical;}
+  .fineprint{font-size:.88rem;color:var(--dim);}
+
+  /* ---------- hub ---------- */
+  .event{display:flex;gap:18px;margin-top:26px;}
+  .datechip{
+    min-width:70px;text-align:center;background:var(--panel);border:1px solid var(--steel);
+    padding:10px 6px;height:fit-content;
+  }
+  .datechip .mo{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--crimson);font-size:.85rem;}
+  .datechip .day{font-family:'Black Ops One',Arial,sans-serif;font-size:1.5rem;}
+  .event .body h3{margin-bottom:6px;}
+  .event .body p{color:var(--gray);}
+  .speakers{margin-top:8px;font-size:.95rem;color:var(--dim);}
+
+  .bookrow{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px;}
+
+  .connect-item{margin-top:26px;}
+  .connect-item p{color:var(--gray);}
+  address{font-style:normal;color:var(--gray);}
+
+  footer{
+    padding:44px 20px 34px;text-align:center;color:var(--dim);font-size:.9rem;
+  }
+
+  /* ---------- bottom nav ---------- */
+  nav.bottom{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;
+    background:#0a0a0b;border-top:1px solid var(--steel);
+    display:flex;justify-content:space-around;
+    padding:10px 4px calc(10px + env(safe-area-inset-bottom));
+  }
+  nav.bottom a{
+    color:var(--gray);text-decoration:none;
+    font-family:'Barlow Condensed',Arial,sans-serif;font-weight:600;font-size:.82rem;
+    letter-spacing:.08em;text-transform:uppercase;
+    display:flex;flex-direction:column;align-items:center;gap:3px;
+  }
+  nav.bottom a .tick{width:18px;height:3px;background:var(--steel);}
+  nav.bottom a:hover{color:var(--white);}
+  nav.bottom a:hover .tick{background:var(--red);}
+
+  @media(min-width:700px){
+    .founder{flex-direction:row;align-items:flex-start;gap:32px;}
+    .founder>div{flex:1;}
+  }
+
+  /* page-specific additions */
+  .pagehero{padding:44px 0 36px;text-align:center;border-bottom:1px solid #1c1e21;
+    background:radial-gradient(ellipse 90% 60% at 50% -10%, rgba(176,0,0,.28), transparent 60%), var(--black);}
+  .pagehero img.seal{width:min(150px,40vw);margin:0 auto 18px;filter:drop-shadow(0 8px 30px rgba(176,0,0,.35));}
+  .pagehero h1{font-size:clamp(1.5rem,5.5vw,2.4rem);}
+  .backlink{display:inline-block;margin-top:14px;color:var(--gray);text-decoration:none;
+    font-family:'Barlow Condensed',Arial,sans-serif;font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:.85rem;}
+  .backlink:hover{color:var(--crimson);}
+  .feecard{background:var(--panel);border:1px solid var(--steel);border-top:4px solid var(--red);
+    padding:26px 22px;text-align:center;margin-top:22px;}
+  .feecard .fee{font-family:'Black Ops One',Arial,sans-serif;font-size:3rem;color:var(--white);line-height:1;}
+  .feecard .fee small{font-size:1rem;color:var(--gray);font-family:'Barlow Condensed',Arial,sans-serif;letter-spacing:.1em;}
+  .payrow{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:20px;}
+  .paybox{background:var(--black);border:1px solid var(--steel);padding:16px 20px;min-width:230px;text-align:center;}
+  .paybox .method{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--crimson);font-size:.9rem;}
+  .paybox .handle{font-family:'Black Ops One',Arial,sans-serif;font-size:1.25rem;margin-top:6px;color:var(--white);word-break:break-all;}
+  .paybox p.note{font-size:.85rem;color:var(--dim);margin-top:6px;}
+  .sched{width:100%;border-collapse:collapse;margin-top:14px;}
+  .sched td{padding:10px 8px;border-bottom:1px solid #1c1e21;color:var(--gray);vertical-align:top;font-size:.97rem;}
+  .sched td.t{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:700;color:var(--white);white-space:nowrap;width:110px;letter-spacing:.04em;}
+  .sched td b{color:var(--white);font-weight:600;}
+  .daytag{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--crimson);font-size:.9rem;}
+
+  .verseblock{background:var(--panel);border-left:4px solid var(--red);padding:16px 18px;margin-top:12px;}
+  .verseblock p.vtext{color:var(--gray);font-style:italic;}
+  .verseblock p.vref{color:var(--crimson);font-family:'Barlow Condensed',Arial,sans-serif;font-weight:700;letter-spacing:.08em;margin-top:6px;font-size:.95rem;}
+  .serieslist{list-style:none;margin-top:10px;}
+  .serieslist li{padding:7px 0;border-bottom:1px solid #1c1e21;color:var(--gray);display:flex;gap:12px;align-items:baseline;}
+  .serieslist li .rn{font-family:'Black Ops One',Arial,sans-serif;color:var(--steel);font-size:.8rem;min-width:2em;}
+  .crisis{background:#1a0000;border:1px solid var(--red);padding:26px 22px;margin-top:40px;}
+  .crisis h3{color:var(--white);}
+  .crisis p{color:var(--gray);margin-top:10px;}
+  .crisis .hotline{font-family:'Black Ops One',Arial,sans-serif;font-size:1.5rem;color:var(--white);margin-top:8px;}
+</style>
+</head>
+<body>
+
+<header class="pagehero">
+  <div class="wrap">
+    <img class="seal" src="rm-logo.jpeg" alt="Real Men seal">
+    <p class="label">Scripture for the Fight</p>
+    <h1 class="stencil">Ammu<span style="color:var(--crimson);">nition</span></h1>
+    <p style="color:var(--gray);margin-top:10px;">&ldquo;For the weapons of our warfare are not carnal, but mighty through God&rdquo; &mdash; 2 Corinthians 10:4</p>
+    <p style="color:var(--dim);margin-top:8px;">Find your battle below. Load the Word. Fire it out loud &mdash; the enemy answered Scripture in the wilderness, and he still has to.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="card">
+      <h3>Temptation &amp; Lust</h3>
+      <p style="color:var(--gray);margin-top:6px;">The fight most men lose in secret. You don't negotiate with it &mdash; you flee it, and you keep a loaded covenant.</p>
+      <div class="verseblock"><p class="vtext">&ldquo;There hath no temptation taken you but such as is common to man: but God is faithful, who will not suffer you to be tempted above that ye are able; but will with the temptation also make a way to escape, that ye may be able to bear it.&rdquo;</p><p class="vref">1 Corinthians 10:13</p></div><div class="verseblock"><p class="vtext">&ldquo;I made a covenant with mine eyes; why then should I think upon a maid?&rdquo;</p><p class="vref">Job 31:1</p></div><div class="verseblock"><p class="vtext">&ldquo;Thy word have I hid in mine heart, that I might not sin against thee.&rdquo;</p><p class="vref">Psalm 119:11</p></div><div class="verseblock"><p class="vtext">&ldquo;Flee also youthful lusts: but follow righteousness, faith, charity, peace, with them that call on the Lord out of a pure heart.&rdquo;</p><p class="vref">2 Timothy 2:22</p></div>
+    </div><div class="card">
+      <h3>Anger</h3>
+      <p style="color:var(--gray);margin-top:6px;">Anger isn't the sin &mdash; what you build or break with it is. A man who rules his spirit outranks a man who takes a city.</p>
+      <div class="verseblock"><p class="vtext">&ldquo;He that is slow to anger is better than the mighty; and he that ruleth his spirit than he that taketh a city.&rdquo;</p><p class="vref">Proverbs 16:32</p></div><div class="verseblock"><p class="vtext">&ldquo;Wherefore, my beloved brethren, let every man be swift to hear, slow to speak, slow to wrath: for the wrath of man worketh not the righteousness of God.&rdquo;</p><p class="vref">James 1:19&ndash;20</p></div><div class="verseblock"><p class="vtext">&ldquo;Be ye angry, and sin not: let not the sun go down upon your wrath: neither give place to the devil.&rdquo;</p><p class="vref">Ephesians 4:26&ndash;27</p></div><div class="verseblock"><p class="vtext">&ldquo;A soft answer turneth away wrath: but grievous words stir up anger.&rdquo;</p><p class="vref">Proverbs 15:1</p></div>
+    </div><div class="card">
+      <h3>Fear &amp; Anxiety</h3>
+      <p style="color:var(--gray);margin-top:6px;">Fear is a spirit, and it isn't yours. Power, love, and a sound mind are the issued equipment.</p>
+      <div class="verseblock"><p class="vtext">&ldquo;For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.&rdquo;</p><p class="vref">2 Timothy 1:7</p></div><div class="verseblock"><p class="vtext">&ldquo;Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness.&rdquo;</p><p class="vref">Isaiah 41:10</p></div><div class="verseblock"><p class="vtext">&ldquo;Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God. And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.&rdquo;</p><p class="vref">Philippians 4:6&ndash;7</p></div><div class="verseblock"><p class="vtext">&ldquo;Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest.&rdquo;</p><p class="vref">Joshua 1:9</p></div>
+    </div><div class="card">
+      <h3>Finances &amp; Provision</h3>
+      <p style="color:var(--gray);margin-top:6px;">Provision follows order: seek the Kingdom first, honor God with the firstfruits, work the plan.</p>
+      <div class="verseblock"><p class="vtext">&ldquo;But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you.&rdquo;</p><p class="vref">Matthew 6:33</p></div><div class="verseblock"><p class="vtext">&ldquo;But my God shall supply all your need according to his riches in glory by Christ Jesus.&rdquo;</p><p class="vref">Philippians 4:19</p></div><div class="verseblock"><p class="vtext">&ldquo;Honour the LORD with thy substance, and with the firstfruits of all thine increase: so shall thy barns be filled with plenty, and thy presses shall burst out with new wine.&rdquo;</p><p class="vref">Proverbs 3:9&ndash;10</p></div>
+    </div><div class="card">
+      <h3>Leading Your Home</h3>
+      <p style="color:var(--gray);margin-top:6px;">Priest, prophet, protector, pastor, provider &mdash; the mantle starts at your own front door.</p>
+      <div class="verseblock"><p class="vtext">&ldquo;...as for me and my house, we will serve the LORD.&rdquo;</p><p class="vref">Joshua 24:15</p></div><div class="verseblock"><p class="vtext">&ldquo;Husbands, love your wives, even as Christ also loved the church, and gave himself for it.&rdquo;</p><p class="vref">Ephesians 5:25</p></div><div class="verseblock"><p class="vtext">&ldquo;Except the LORD build the house, they labour in vain that build it...&rdquo;</p><p class="vref">Psalm 127:1</p></div><div class="verseblock"><p class="vtext">&ldquo;And these words, which I command thee this day, shall be in thine heart: and thou shalt teach them diligently unto thy children...&rdquo;</p><p class="vref">Deuteronomy 6:6&ndash;7</p></div>
+    </div><div class="card">
+      <h3>Grief &amp; Loss</h3>
+      <p style="color:var(--gray);margin-top:6px;">Real men grieve. The Lord doesn't stand far from a broken heart &mdash; He moves closer.</p>
+      <div class="verseblock"><p class="vtext">&ldquo;The LORD is nigh unto them that are of a broken heart; and saveth such as be of a contrite spirit.&rdquo;</p><p class="vref">Psalm 34:18</p></div><div class="verseblock"><p class="vtext">&ldquo;Blessed are they that mourn: for they shall be comforted.&rdquo;</p><p class="vref">Matthew 5:4</p></div><div class="verseblock"><p class="vtext">&ldquo;And God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying, neither shall there be any more pain: for the former things are passed away.&rdquo;</p><p class="vref">Revelation 21:4</p></div>
+    </div><div class="card">
+      <h3>Discouragement &amp; Heaviness</h3>
+      <p style="color:var(--gray);margin-top:6px;">When the fight is long and the ground looks the same as yesterday &mdash; hope in God anyway. The harvest has a due season.</p>
+      <div class="verseblock"><p class="vtext">&ldquo;Why art thou cast down, O my soul? and why art thou disquieted within me? hope thou in God: for I shall yet praise him, who is the health of my countenance, and my God.&rdquo;</p><p class="vref">Psalm 42:11</p></div><div class="verseblock"><p class="vtext">&ldquo;But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.&rdquo;</p><p class="vref">Isaiah 40:31</p></div><div class="verseblock"><p class="vtext">&ldquo;And let us not be weary in well doing: for in due season we shall reap, if we faint not.&rdquo;</p><p class="vref">Galatians 6:9</p></div><div class="verseblock"><p class="vtext">&ldquo;We are troubled on every side, yet not distressed; we are perplexed, but not in despair; persecuted, but not forsaken; cast down, but not destroyed.&rdquo;</p><p class="vref">2 Corinthians 4:8&ndash;9</p></div>
+    </div><div class="card">
+      <h3>Addiction &amp; Strongholds</h3>
+      <p style="color:var(--gray);margin-top:6px;">A stronghold is a lie with a fortress around it. The weapons issued to you are mighty enough to pull it down &mdash; and confession keeps the ground you take.</p>
+      <div class="verseblock"><p class="vtext">&ldquo;(For the weapons of our warfare are not carnal, but mighty through God to the pulling down of strong holds;) casting down imaginations, and every high thing that exalteth itself against the knowledge of God...&rdquo;</p><p class="vref">2 Corinthians 10:4&ndash;5</p></div><div class="verseblock"><p class="vtext">&ldquo;If the Son therefore shall make you free, ye shall be free indeed.&rdquo;</p><p class="vref">John 8:36</p></div><div class="verseblock"><p class="vtext">&ldquo;For sin shall not have dominion over you: for ye are not under the law, but under grace.&rdquo;</p><p class="vref">Romans 6:14</p></div><div class="verseblock"><p class="vtext">&ldquo;If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.&rdquo;</p><p class="vref">1 John 1:9</p></div>
+    </div><div class="card">
+      <h3>Isolation</h3>
+      <p style="color:var(--gray);margin-top:6px;">The enemy's oldest play: separate a man from his brothers, then work him alone. Two are better than one. Stay in formation.</p>
+      <div class="verseblock"><p class="vtext">&ldquo;Two are better than one; because they have a good reward for their labour. For if they fall, the one will lift up his fellow: but woe to him that is alone when he falleth; for he hath not another to help him up.&rdquo;</p><p class="vref">Ecclesiastes 4:9&ndash;10</p></div><div class="verseblock"><p class="vtext">&ldquo;Iron sharpeneth iron; so a man sharpeneth the countenance of his friend.&rdquo;</p><p class="vref">Proverbs 27:17</p></div><div class="verseblock"><p class="vtext">&ldquo;And let us consider one another to provoke unto love and to good works: not forsaking the assembling of ourselves together, as the manner of some is...&rdquo;</p><p class="vref">Hebrews 10:24&ndash;25</p></div>
+    </div><div class="card">
+      <h3>Pride</h3>
+      <p style="color:var(--gray);margin-top:6px;">Pride is the one enemy that fights for God's position. Humility isn't weakness &mdash; it's rank properly worn.</p>
+      <div class="verseblock"><p class="vtext">&ldquo;Pride goeth before destruction, and an haughty spirit before a fall.&rdquo;</p><p class="vref">Proverbs 16:18</p></div><div class="verseblock"><p class="vtext">&ldquo;...God resisteth the proud, but giveth grace unto the humble.&rdquo;</p><p class="vref">James 4:6</p></div><div class="verseblock"><p class="vtext">&ldquo;...what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?&rdquo;</p><p class="vref">Micah 6:8</p></div>
+    </div>
+
+    <div class="crisis" id="heavy">
+      <p class="label">When the Battle Is Heavy</p>
+      <h3 class="stencil">No Man Fights Alone</h3>
+      <p>Some nights the fight is bigger than a verse on a screen &mdash; and reaching out IS the act of a real man, not the failure of one. If you are in crisis or thinking about ending your life, make a call before you make any permanent decision.</p>
+      <p class="hotline">988 &mdash; Suicide &amp; Crisis Lifeline</p>
+      <p>Call or text 988, any hour, any night.</p>
+      <p class="hotline">Veterans: 988, then press 1</p>
+      <p>Or text 838255. Staffed by people who understand the uniform.</p>
+      <p style="margin-top:14px;">And call your brothers &mdash; Apostle Miller: <a href="tel:7133034539" style="color:var(--white);font-weight:700;">713-303-4539</a>. You can also <a href="index.html#backup">request backup and prayer here</a>. Whatever you're carrying, you don't carry it by yourself. That's the whole point of this brotherhood.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Chosen To Be Transparent Church &nbsp;&middot;&nbsp; 1Team1Fight Ministries<br>
+  Will The Real Men Please Stand Up &mdash; Male by birth. Man by choice.
+</footer>
+<nav class="bottom" aria-label="Site sections">
+  <a href="index.html"><span class="tick"></span>Home</a>
+  <a href="retreat.html"><span class="tick"></span>Retreat</a>
+  <a href="armory.html"><span class="tick"></span>Armory</a>
+  <a href="wall.html"><span class="tick"></span>The Wall</a>
+  <a href="ammunition.html"><span class="tick"></span>Ammo</a>
+  <a href="index.html#backup"><span class="tick"></span>Backup</a>
+</nav>
+</body>
+</html>

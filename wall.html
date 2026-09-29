@@ -5,250 +5,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>The Wall — Teaching Archive | Will The Real Men Please Stand Up</title>
 <meta name="description" content="The teaching archive of the CTBT Men's Ministry: Prior Engagements, The Mantle of Manhood, Breaking Cycles, Kingdom Man, and more.">
-<meta name="theme-color" content="#0d0000">
+<meta name="theme-color" content="#000000">
 <link rel="icon" type="image/jpeg" href="rm-logo.jpeg">
 <link rel="apple-touch-icon" href="rm-logo.jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --black:#000000;
-    --panel:#141416;
-    --steel:#2e3238;
-    --red:#b00000;
-    --crimson:#c8102e;
-    --white:#f2f2ef;
-    --gray:#b9bec6;
-    --dim:#7d838c;
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
-  body{
-    background:var(--black);
-    color:var(--white);
-    font-family:'Barlow',Arial,sans-serif;
-    font-size:17px;
-    line-height:1.6;
-    padding-bottom:76px; /* room for bottom nav */
-  }
-  img{max-width:100%;display:block;}
-  a{color:var(--crimson);}
-
-  /* ---------- type ---------- */
-  .stencil{
-    font-family:'Black Ops One',Arial,sans-serif;
-    font-weight:400;
-    letter-spacing:.03em;
-    line-height:1.15;
-    text-transform:uppercase;
-  }
-  .label{
-    font-family:'Barlow Condensed',Arial,sans-serif;
-    font-weight:600;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    font-size:.85rem;
-    color:var(--crimson);
-  }
-  h2.stencil{font-size:clamp(1.6rem,5.5vw,2.4rem);}
-  h3{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:700;font-size:1.35rem;letter-spacing:.02em;}
-
-  /* rank-stripe divider */
-  .stripes{display:flex;gap:5px;margin:14px 0 22px;}
-  .stripes span{height:4px;background:var(--red);}
-  .stripes span:nth-child(1){width:44px;}
-  .stripes span:nth-child(2){width:22px;}
-  .stripes span:nth-child(3){width:10px;background:var(--crimson);}
-
-  .wrap{max-width:820px;margin:0 auto;padding:0 20px;}
-  section{padding:64px 0;border-bottom:1px solid #1c1e21;}
-
-  /* ---------- hero ---------- */
-  .hero{
-    padding:52px 0 60px;
-    text-align:center;
-    border-bottom:1px solid #1c1e21;
-    background:
-      radial-gradient(ellipse 90% 60% at 50% -10%, rgba(176,0,0,.28), transparent 60%),
-      var(--black);
-  }
-  .hero img.seal{width:min(300px,70vw);margin:0 auto 26px;filter:drop-shadow(0 10px 40px rgba(176,0,0,.35));}
-  .hero h1{font-size:clamp(1.7rem,6.5vw,2.9rem);}
-  .hero h1 .line-red{color:var(--crimson);}
-  .mandate{
-    margin:16px auto 6px;
-    font-family:'Barlow Condensed',Arial,sans-serif;
-    font-weight:600;font-size:1.15rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gray);
-  }
-  .verse{max-width:520px;margin:22px auto 0;color:var(--gray);font-style:italic;}
-  .verse cite{display:block;margin-top:6px;font-style:normal;color:var(--dim);font-size:.9rem;}
-
-  /* muster card */
-  .muster{
-    margin:36px auto 0;max-width:560px;
-    background:var(--panel);
-    border:1px solid var(--steel);
-    border-top:4px solid var(--red);
-    padding:26px 22px;
-    text-align:center;
-  }
-  .muster .time{font-family:'Black Ops One',Arial,sans-serif;font-size:2.2rem;color:var(--white);}
-  .muster .time small{font-size:1rem;color:var(--gray);font-family:'Barlow Condensed',Arial,sans-serif;letter-spacing:.1em;}
-  .btn{
-    display:inline-block;margin-top:16px;
-    background:var(--red);color:var(--white);text-decoration:none;
-    font-family:'Barlow Condensed',Arial,sans-serif;font-weight:700;font-size:1.1rem;
-    letter-spacing:.12em;text-transform:uppercase;
-    padding:14px 34px;border:none;cursor:pointer;
-  }
-  .btn:hover{background:var(--crimson);}
-  .btn.ghost{background:transparent;border:2px solid var(--steel);color:var(--white);}
-  .btn.ghost:hover{border-color:var(--crimson);color:var(--crimson);}
-  .hint{margin-top:12px;font-size:.9rem;color:var(--dim);}
-
-  .homescreen{
-    margin:26px auto 0;max-width:560px;font-size:.92rem;color:var(--dim);
-    border:1px dashed var(--steel);padding:12px 16px;
-  }
-  .homescreen b{color:var(--gray);}
-
-  /* ---------- movement ---------- */
-  .acro{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:700;font-size:1.15rem;letter-spacing:.06em;margin:10px 0 4px;}
-  .acro b{color:var(--crimson);}
-  .factline{display:grid;grid-template-columns:110px 1fr;gap:6px 18px;margin-top:22px;}
-  .factline dt{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);font-size:.9rem;padding-top:2px;}
-  .factline dd{color:var(--gray);}
-  .declaration{
-    margin-top:28px;padding:22px;background:var(--panel);border-left:4px solid var(--red);
-    color:var(--gray);
-  }
-  .declaration p{margin-bottom:8px;}
-  .declaration .stencil{color:var(--white);font-size:1.05rem;margin-bottom:12px;}
-
-  .pillars{list-style:none;margin-top:24px;counter-reset:pillar;}
-  .pillars li{
-    counter-increment:pillar;
-    display:flex;align-items:baseline;gap:14px;
-    padding:12px 0;border-bottom:1px solid #1c1e21;
-    font-family:'Barlow Condensed',Arial,sans-serif;font-weight:600;font-size:1.15rem;letter-spacing:.04em;
-  }
-  .pillars li::before{
-    content:"▲";
-    color:var(--red);font-size:.7rem;transform:translateY(-1px);
-  }
-
-  /* ---------- founder ---------- */
-  .founder{display:flex;flex-direction:column;gap:18px;}
-  .founder .name{font-size:1.3rem;}
-  .founder .role{color:var(--dim);font-family:'Barlow Condensed',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;font-size:.9rem;}
-  .founder p{color:var(--gray);margin-top:12px;}
-
-  /* ---------- formation ---------- */
-  .card{
-    background:var(--panel);border:1px solid var(--steel);padding:24px 22px;margin-top:22px;
-  }
-  .card .when{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--crimson);font-size:.95rem;}
-  .card h3{margin-top:6px;}
-  .card p{color:var(--gray);margin-top:10px;}
-  .habits{list-style:none;margin-top:14px;}
-  .habits li{padding:8px 0;border-bottom:1px solid #1c1e21;color:var(--gray);display:flex;gap:12px;align-items:baseline;}
-  .habits li .rn{font-family:'Black Ops One',Arial,sans-serif;color:var(--steel);font-size:.85rem;min-width:2em;}
-  .habits li.done .rn{color:var(--red);}
-
-  /* ---------- backup / forms ---------- */
-  form{margin-top:22px;display:flex;flex-direction:column;gap:14px;}
-  input,textarea,select{
-    background:var(--black);border:1px solid var(--steel);color:var(--white);
-    font-family:'Barlow',Arial,sans-serif;font-size:1rem;padding:12px 14px;width:100%;
-  }
-  input:focus,textarea:focus,select:focus{outline:2px solid var(--crimson);outline-offset:1px;}
-  textarea{min-height:120px;resize:vertical;}
-  .fineprint{font-size:.88rem;color:var(--dim);}
-
-  /* ---------- hub ---------- */
-  .event{display:flex;gap:18px;margin-top:26px;}
-  .datechip{
-    min-width:70px;text-align:center;background:var(--panel);border:1px solid var(--steel);
-    padding:10px 6px;height:fit-content;
-  }
-  .datechip .mo{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--crimson);font-size:.85rem;}
-  .datechip .day{font-family:'Black Ops One',Arial,sans-serif;font-size:1.5rem;}
-  .event .body h3{margin-bottom:6px;}
-  .event .body p{color:var(--gray);}
-  .speakers{margin-top:8px;font-size:.95rem;color:var(--dim);}
-
-  .bookrow{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px;}
-
-  .connect-item{margin-top:26px;}
-  .connect-item p{color:var(--gray);}
-  address{font-style:normal;color:var(--gray);}
-
-  footer{
-    padding:44px 20px 34px;text-align:center;color:var(--dim);font-size:.9rem;
-  }
-
-  /* ---------- bottom nav ---------- */
-  nav.bottom{
-    position:fixed;left:0;right:0;bottom:0;z-index:50;
-    background:#0a0a0b;border-top:1px solid var(--steel);
-    display:flex;justify-content:space-around;
-    padding:10px 4px calc(10px + env(safe-area-inset-bottom));
-  }
-  nav.bottom a{
-    color:var(--gray);text-decoration:none;
-    font-family:'Barlow Condensed',Arial,sans-serif;font-weight:600;font-size:.82rem;
-    letter-spacing:.08em;text-transform:uppercase;
-    display:flex;flex-direction:column;align-items:center;gap:3px;
-  }
-  nav.bottom a .tick{width:18px;height:3px;background:var(--steel);}
-  nav.bottom a:hover{color:var(--white);}
-  nav.bottom a:hover .tick{background:var(--red);}
-
-  @media(min-width:700px){
-    .founder{flex-direction:row;align-items:flex-start;gap:32px;}
-    .founder>div{flex:1;}
-  }
-
-  /* page-specific additions */
-  .pagehero{padding:44px 0 36px;text-align:center;border-bottom:1px solid #1c1e21;
-    background:radial-gradient(ellipse 90% 60% at 50% -10%, rgba(176,0,0,.28), transparent 60%), var(--black);}
-  .pagehero img.seal{width:min(150px,40vw);margin:0 auto 18px;filter:drop-shadow(0 8px 30px rgba(176,0,0,.35));}
-  .pagehero h1{font-size:clamp(1.5rem,5.5vw,2.4rem);}
-  .backlink{display:inline-block;margin-top:14px;color:var(--gray);text-decoration:none;
-    font-family:'Barlow Condensed',Arial,sans-serif;font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:.85rem;}
-  .backlink:hover{color:var(--crimson);}
-  .feecard{background:var(--panel);border:1px solid var(--steel);border-top:4px solid var(--red);
-    padding:26px 22px;text-align:center;margin-top:22px;}
-  .feecard .fee{font-family:'Black Ops One',Arial,sans-serif;font-size:3rem;color:var(--white);line-height:1;}
-  .feecard .fee small{font-size:1rem;color:var(--gray);font-family:'Barlow Condensed',Arial,sans-serif;letter-spacing:.1em;}
-  .payrow{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:20px;}
-  .paybox{background:var(--black);border:1px solid var(--steel);padding:16px 20px;min-width:230px;text-align:center;}
-  .paybox .method{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--crimson);font-size:.9rem;}
-  .paybox .handle{font-family:'Black Ops One',Arial,sans-serif;font-size:1.25rem;margin-top:6px;color:var(--white);word-break:break-all;}
-  .paybox p.note{font-size:.85rem;color:var(--dim);margin-top:6px;}
-  .sched{width:100%;border-collapse:collapse;margin-top:14px;}
-  .sched td{padding:10px 8px;border-bottom:1px solid #1c1e21;color:var(--gray);vertical-align:top;font-size:.97rem;}
-  .sched td.t{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:700;color:var(--white);white-space:nowrap;width:110px;letter-spacing:.04em;}
-  .sched td b{color:var(--white);font-weight:600;}
-  .daytag{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--crimson);font-size:.9rem;}
-
-  .verseblock{background:var(--panel);border-left:4px solid var(--red);padding:16px 18px;margin-top:12px;}
-  .verseblock p.vtext{color:var(--gray);font-style:italic;}
-  .verseblock p.vref{color:var(--crimson);font-family:'Barlow Condensed',Arial,sans-serif;font-weight:700;letter-spacing:.08em;margin-top:6px;font-size:.95rem;}
-  .serieslist{list-style:none;margin-top:10px;}
-  .serieslist li{padding:7px 0;border-bottom:1px solid #1c1e21;color:var(--gray);display:flex;gap:12px;align-items:baseline;}
-  .serieslist li .rn{font-family:'Black Ops One',Arial,sans-serif;color:var(--steel);font-size:.8rem;min-width:2em;}
-  .crisis{background:#1a0000;border:1px solid var(--red);padding:26px 22px;margin-top:40px;}
-  .crisis h3{color:var(--white);}
-  .crisis p{color:var(--gray);margin-top:10px;}
-  .crisis .hotline{font-family:'Black Ops One',Arial,sans-serif;font-size:1.5rem;color:var(--white);margin-top:8px;}
-</style>
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="./" aria-label="Will The Real Men Please Stand Up — home">
+      <img src="rm-logo.jpeg" alt="">
+      <span>Will The <b>Real Men</b><br>Please Stand Up</span>
+    </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainnav"><span></span></button>
+    <nav class="mainnav" id="mainnav" aria-label="Main">
+      <ul>
+        <li><a href="./">Home</a></li>
+        <li><a href="./#purpose">About</a></li>
+        <li class="drop"><button type="button" aria-expanded="false">Formation</button>
+          <ul class="submenu">
+            <li><a href="./#orders">This Week's Charge</a></li>
+            <li><a href="wall.html" aria-current="page">The Wall &ndash; Teaching Archive</a></li>
+            <li><a href="ammunition.html">Ammunition &ndash; Scripture</a></li>
+          </ul>
+        </li>
+        <li><a href="retreat.html">Retreat</a></li>
+        <li class="drop"><button type="button" aria-expanded="false">Shop</button>
+          <ul class="submenu">
+            <li><a href="shop.html">Books</a></li>
+            <li><a href="armory.html">The Armory &ndash; Gear</a></li>
+          </ul>
+        </li>
+        <li><a href="./#backup">Prayer</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a class="btn nav-cta" href="https://zoom.us/j/99618695026?pwd=kpAc87u4bTWr7hXqGRiizqfAc4Csl6.1">Join Tuesday Zoom</a>
+    </nav>
+  </div>
+</header>
 
-<header class="pagehero">
+<main id="content" class="sub">
+<header class="pagehero watermark" >
   <div class="wrap">
     <img class="seal" src="rm-logo.jpeg" alt="Real Men seal">
     <p class="label">Teaching Archive</p>
@@ -264,14 +65,14 @@
     <h2 class="stencil">Prior Engagements</h2>
     <div class="stripes"><span></span><span></span><span></span></div>
     <div class="card">
-      <p class="when">The Five Habits of Faith &middot; Nehemiah 6 &middot; Now Teaching</p>
+      <p class="when">The Five Habits of Faith &middot; Nehemiah 6 &middot; Series Complete</p>
       <p style="color:var(--gray);margin-top:10px;">Nehemiah had every invitation to come down off the wall &mdash; distraction, slander, fear, and false counsel. He finished anyway. Five habits that keep a man on his assignment when the enemy sends for him.</p>
       <ul class="habits" style="margin-top:14px;">
         <li class="done"><span class="rn">I</span> Focus &mdash; the great work outranks the invitation (Neh 6:1&ndash;4)</li>
         <li class="done"><span class="rn">II</span> Discernment &mdash; reading Gashmu before you answer him (Neh 6:5&ndash;8)</li>
         <li class="done"><span class="rn">III</span> Prayer &mdash; &ldquo;Now therefore, O God, strengthen my hands&rdquo; (Neh 6:9)</li>
         <li class="done"><span class="rn">IV</span> Courage &mdash; &ldquo;Should such a man as I flee?&rdquo; (Neh 6:10&ndash;14)</li>
-        <li><span class="rn">V</span> Finishing &mdash; the wall gets completed (Neh 6:15&ndash;16) &middot; coming soon</li>
+        <li class="done"><span class="rn">V</span> Finishing &mdash; &ldquo;So the wall was finished&rdquo; (Neh 6:15&ndash;16)</li>
       </ul>
     </div>
   </div>
@@ -322,17 +123,52 @@
   </div>
 </section>
 
-<footer>
-  Chosen To Be Transparent Church &nbsp;&middot;&nbsp; 1Team1Fight Ministries<br>
-  Will The Real Men Please Stand Up &mdash; Male by birth. Man by choice.
+</main>
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="rm-logo.jpeg" alt="Real Men seal">
+        <p class="tag">Male by birth. Man by choice.</p>
+        <p>The men's ministry of Chosen To Be Transparent Church, Houston, Texas.</p>
+      </div>
+      <div>
+        <h4>Ministry</h4>
+        <ul>
+          <li><a href="./#purpose">About</a></li>
+          <li><a href="./#founder">The Founder</a></li>
+          <li><a href="wall.html">The Wall</a></li>
+          <li><a href="ammunition.html">Ammunition</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get Involved</h4>
+        <ul>
+          <li><a href="https://zoom.us/j/99618695026?pwd=kpAc87u4bTWr7hXqGRiizqfAc4Csl6.1">Tuesday 5 AM Zoom</a></li>
+          <li><a href="retreat.html">Men's Retreat</a></li>
+          <li><a href="shop.html">Book Shop</a></li>
+          <li><a href="armory.html">The Armory</a></li>
+          <li><a href="./#backup">Prayer &amp; Testimony</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <address>
+          Chosen To Be Transparent Church<br>
+          9001 Airport Blvd., Suite 208<br>
+          Houston, TX 77061
+        </address>
+        <p style="margin-top:10px;"><a href="mailto:cmiller@1team1fightministries.com">cmiller@1team1fightministries.com</a></p>
+        <p style="margin-top:6px;"><a href="https://maps.google.com/?q=9001+Airport+Blvd+Suite+208+Houston+TX+77061">Open in Maps</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p><b>&copy; 2026 Chosen To Be Transparent Church &amp; 1Team1Fight Ministries.</b> All rights reserved.</p>
+      <p>Tip: add this site to your home screen from your browser's Share menu.</p>
+    </div>
+  </div>
 </footer>
-<nav class="bottom" aria-label="Site sections">
-  <a href="index.html"><span class="tick"></span>Home</a>
-  <a href="retreat.html"><span class="tick"></span>Retreat</a>
-  <a href="armory.html"><span class="tick"></span>Armory</a>
-  <a href="wall.html"><span class="tick"></span>The Wall</a>
-  <a href="ammunition.html"><span class="tick"></span>Ammo</a>
-  <a href="index.html#backup"><span class="tick"></span>Backup</a>
-</nav>
+<script src="site.js"></script>
+
 </body>
 </html>

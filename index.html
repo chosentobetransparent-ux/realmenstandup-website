@@ -196,11 +196,11 @@
     </div>
     <div class="feature">
       <article class="orders-card">
-        <p class="date">This week's charge &middot; Week of September 15, 2026</p>
-        <h3>Stay On Your Wall</h3>
-        <blockquote>&ldquo;And I sent messengers unto them, saying, I am doing a great work, so that I cannot come down: why should the work cease, whilst I leave it, and come down to you?&rdquo;<cite>Nehemiah 6:3</cite></blockquote>
-        <p>Sanballat sent for Nehemiah four times, and four times the answer was the same: I cannot come down. Brother, something has been sending for you too &mdash; an old habit, an old argument, an old version of you. It doesn't deserve a meeting. Your family, your assignment, and your God are on the wall with you.</p>
-        <p class="action-line">This week's action: name the one thing that keeps calling you down off your wall &mdash; and tell a brother about it before Sunday. What gets named gets guarded.</p>
+       <p class="date" id="charge-label">This week's charge</p>
+        <h3 id="charge-title">Stay On Your Wall</h3>
+        <blockquote><span id="charge-verse">&ldquo;And I sent messengers unto them, saying, I am doing a great work, so that I cannot come down: why should the work cease, whilst I leave it, and come down to you?&rdquo;</span><cite id="charge-ref">Nehemiah 6:3</cite></blockquote>
+        <p id="charge-body">Sanballat sent for Nehemiah four times, and four times the answer was the same: I cannot come down. Brother, something has been sending for you too &mdash; an old habit, an old argument, an old version of you. It doesn't deserve a meeting. Your family, your assignment, and your God are on the wall with you.</p>
+        <p class="action-line" id="charge-action">This week's action: name the one thing that keeps calling you down off your wall &mdash; and tell a brother about it before Sunday. What gets named gets guarded.</p>
       </article>
       <div class="seriesbox">
         <p class="when">Series complete &middot; Nehemiah 6</p>
@@ -342,6 +342,6 @@
     var story = document.getElementById("tStory").value;
     sendMail("Battle Report (Testimony) — Real Men", "Name: " + name + "\n\nTestimony:\n" + story);
   });
-</script>
+<script src="charges.js"></script>
 </body>
 </html>

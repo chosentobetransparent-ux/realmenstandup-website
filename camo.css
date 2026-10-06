@@ -1,0 +1,9 @@
+/* Camouflage theme preview — load after site.css; delete the <link> to revert */
+:root{--panel:rgba(14,16,10,.88);--ink:rgba(10,12,8,.85);--steel:#4a4f33;}
+body{background:#1c1f13 url(camo.svg) repeat;background-size:400px;}
+main>section:not(.hero):not(.light):not(.band):not(.newrelease),.sub>section{background:rgba(10,12,8,.38);}
+.newrelease{background:rgba(10,12,8,.45);}
+.light{background:#d9d3bd;}
+.site-header{background:rgba(12,14,9,.94);}
+.site-footer{background:rgba(8,9,6,.92);}
+.strip{background:rgba(10,12,8,.85);}

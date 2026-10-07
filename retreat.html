@@ -13,6 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
 <link rel="stylesheet" href="camo.css">
+<link rel="stylesheet" href="highlights.css">
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
@@ -62,13 +63,47 @@
   </div>
 </header>
 
-<section id="thanks" style="padding:40px 0 10px;">
-  <div class="wrap">
-    <div class="declaration" style="margin-top:0;">
-      <p class="stencil">2026: Mission Accomplished</p>
+<section id="highlights" class="hl">
+  <div class="hl-band">
+    <video class="hl-bg" src="media/r26-lake.mp4" poster="media/r26-lake.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
+    <div class="wrap hl-band-text">
+      <p class="label">Lake Conroe &middot; October 2&ndash;4, 2026</p>
+      <h2 class="stencil">Mission accomplished</h2>
       <p>To every man who showed up at Lake Conroe &mdash; thank you. Men came down from that retreat standing male by birth, man by choice. Now we go deeper. In 2027 the disciples' request becomes ours: &ldquo;Lord, teach us to pray&rdquo; (Luke 11:1).</p>
     </div>
   </div>
+  <div class="wrap hl-body">
+    <h3 class="hl-h">2026 highlights</h3>
+    <div class="hl-grid">
+      <a class="hl-tile hl-wide" href="media/r26-01.jpg" data-cap="The brotherhood in Real Men shirts"><img src="media/r26-01-t.jpg" alt="The brotherhood in Real Men shirts" loading="lazy"></a>
+      <a class="hl-tile" href="media/r26-02.jpg" data-cap="Rainbow over Lake Conroe"><img src="media/r26-02-t.jpg" alt="Rainbow over Lake Conroe" loading="lazy"></a>
+      <a class="hl-tile" href="media/r26-03.jpg" data-cap="Worship at sunset by the water"><img src="media/r26-03-t.jpg" alt="Worship at sunset by the water" loading="lazy"></a>
+      <a class="hl-tile" href="media/r26-04.jpg" data-cap="Preaching on the deck at sunset"><img src="media/r26-04-t.jpg" alt="Preaching on the deck at sunset" loading="lazy"></a>
+      <a class="hl-tile" href="media/r26-05.jpg" data-cap="Morning workout on the lawn"><img src="media/r26-05-t.jpg" alt="Morning workout on the lawn" loading="lazy"></a>
+      <a class="hl-tile" href="media/r26-06.jpg" data-cap="Apostle Miller with the workout crew"><img src="media/r26-06-t.jpg" alt="Apostle Miller with the workout crew" loading="lazy"></a>
+      <a class="hl-tile" href="media/r26-07.jpg" data-cap="Teaching on the lawn at sunset"><img src="media/r26-07-t.jpg" alt="Teaching on the lawn at sunset" loading="lazy"></a>
+      <a class="hl-tile" href="media/r26-08.jpg" data-cap="Worship on the back porch"><img src="media/r26-08-t.jpg" alt="Worship on the back porch" loading="lazy"></a>
+      <a class="hl-tile" href="media/r26-09.jpg" data-cap="Teaching in the living room"><img src="media/r26-09-t.jpg" alt="Teaching in the living room" loading="lazy"></a>
+      <a class="hl-tile" href="media/r26-10.jpg" data-cap="The Word in the living room"><img src="media/r26-10-t.jpg" alt="The Word in the living room" loading="lazy"></a>
+      <a class="hl-tile" href="media/r26-11.jpg" data-cap="Late-night teaching"><img src="media/r26-11-t.jpg" alt="Late-night teaching" loading="lazy"></a>
+      <a class="hl-tile" href="media/r26-12.jpg" data-cap="Teaching with slides"><img src="media/r26-12-t.jpg" alt="Teaching with slides" loading="lazy"></a>
+      <a class="hl-tile" href="media/r26-13.jpg" data-cap="Guitar worship by the water"><img src="media/r26-13-t.jpg" alt="Guitar worship by the water" loading="lazy"></a>
+      <a class="hl-tile" href="media/r26-14.jpg" data-cap="Feeding the brotherhood"><img src="media/r26-14-t.jpg" alt="Feeding the brotherhood" loading="lazy"></a>
+      <a class="hl-tile hl-long" href="media/r26-15.jpg" data-cap="Night prayer huddle by the lake"><img src="media/r26-15-t.jpg" alt="Night prayer huddle by the lake" loading="lazy"></a>
+      <a class="hl-tile" href="media/r26-16.jpg" data-cap="Brothers praying over a brother"><img src="media/r26-16-t.jpg" alt="Brothers praying over a brother" loading="lazy"></a>
+    </div>
+    <div class="hl-clips">
+      <figure><video src="media/r26-workout.mp4" poster="media/r26-workout.jpg" controls preload="none" playsinline></video><figcaption>Morning workout on the lawn</figcaption></figure>
+      <figure><video src="media/r26-session.mp4" poster="media/r26-session.jpg" controls preload="none" playsinline></video><figcaption>Living-room session</figcaption></figure>
+    </div>
+    <p style="text-align:center;margin-top:28px;"><a class="btn" href="#register">Don't miss 2027 &mdash; lock in $25 early registration</a></p>
+  </div>
+  <dialog class="hl-box" aria-label="Photo viewer">
+    <button class="hl-x" type="button" aria-label="Close">&times;</button>
+    <button class="hl-nav hl-prev" type="button" aria-label="Previous photo">&lsaquo;</button>
+    <figure><img alt=""><figcaption></figcaption></figure>
+    <button class="hl-nav hl-next" type="button" aria-label="Next photo">&rsaquo;</button>
+  </dialog>
 </section>
 
 <section id="register">
@@ -171,6 +206,22 @@
   });
 </script>
 
+<script>
+(function(){
+  var bg=document.querySelector('.hl-bg');
+  if(bg && window.matchMedia('(prefers-reduced-motion: reduce)').matches){bg.removeAttribute('autoplay');bg.pause();}
+  var tiles=[].slice.call(document.querySelectorAll('.hl-tile')),box=document.querySelector('.hl-box');
+  if(!box||!box.showModal)return;
+  var img=box.querySelector('img'),cap=box.querySelector('figcaption'),i=0;
+  function show(n){i=(n+tiles.length)%tiles.length;img.src=tiles[i].getAttribute('href');img.alt=tiles[i].dataset.cap;cap.textContent=tiles[i].dataset.cap+'  ('+(i+1)+' of '+tiles.length+')';}
+  tiles.forEach(function(t,n){t.addEventListener('click',function(e){e.preventDefault();show(n);box.showModal();});});
+  box.querySelector('.hl-x').onclick=function(){box.close();};
+  box.querySelector('.hl-prev').onclick=function(){show(i-1);};
+  box.querySelector('.hl-next').onclick=function(){show(i+1);};
+  box.addEventListener('click',function(e){if(e.target===box)box.close();});
+  box.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')show(i-1);if(e.key==='ArrowRight')show(i+1);});
+})();
+</script>
 </main>
 <footer class="site-footer" id="contact">
   <div class="wrap">

@@ -61,7 +61,7 @@
     <img class="seal" src="rm-logo.jpeg" alt="Real Men seal">
     <p class="label">Contact</p>
     <h1 class="stencil">Report <span style="color:var(--crimson);">In</span></h1>
-    <p style="color:var(--gray);margin-top:10px;">Questions, connection, or a ride to the next gathering &mdash; reach out.</p>
+    <p style="color:var(--gray);margin-top:10px;">Questions, connection, or a speaker for your school, facility, or event Questions, connection, or a ride to the next gathering &mdash; reach out.mdash; reach out.</p>
   </div>
 </header>
 
@@ -84,16 +84,59 @@
           <a class="btn ghost" href="prayer.html">Request Prayer</a>
         </div>
       </div>
-      <div class="formcard">
+      <div class="formcard" id="fallin">
         <h3>Fall In Every Tuesday</h3>
         <p>Men's formation on Zoom, every Tuesday at 5:00 AM Central. Come as you are.</p>
         <div class="btnrow" style="margin-top:18px;">
           <a class="btn" href="https://zoom.us/j/99618695026?pwd=kpAc87u4bTWr7hXqGRiizqfAc4Csl6.1">Join the Zoom</a>
         </div>
       </div>
+      <div class="formcard" id="speaking">
+        <h3>Book a Speaker or Mentor</h3>
+        <p>Bring Apostle Miller or a mentor from the brotherhood to your school, prison or jail, church, or community event.</p>
+        <form id="speakForm">
+          <input type="text" id="sName" placeholder="Your name" required autocomplete="name" aria-label="Your name">
+          <input type="text" id="sOrg" placeholder="School, facility, or organization" required aria-label="School, facility, or organization">
+          <select id="sType" required aria-label="Type of event">
+            <option value="">Type of event</option>
+            <option>School assembly or class</option>
+            <option>Prison or jail ministry</option>
+            <option>Community event</option>
+            <option>Church or men's conference</option>
+            <option>Ongoing mentoring</option>
+            <option>Other</option>
+          </select>
+          <input type="text" id="sDate" placeholder="Date(s) you have in mind" aria-label="Date(s)">
+          <input type="text" id="sPlace" placeholder="City / location" aria-label="City or location">
+          <input type="text" id="sContact" placeholder="Best phone or email to reach you" required aria-label="Phone or email">
+          <textarea id="sDetails" placeholder="Tell us about the event, the audience, and what you'd like covered" aria-label="Event details"></textarea>
+          <button type="submit" class="btn">Send My Request</button>
+          <p class="fineprint">Opens your email app, addressed to Apostle Miller.</p>
+        </form>
+      </div>
     </div>
   </div>
 </section>
+<style>
+  #speaking{grid-column:1/-1;}
+  #speakForm{display:grid;grid-template-columns:1fr 1fr;gap:14px 16px;}
+  #speakForm input,#speakForm select,#speakForm textarea{margin:0;}
+  #fallin{grid-column:1/-1;}
+  #speakForm textarea,#speakForm .fineprint,#speakForm button{grid-column:1/-1;}
+  #speakForm button{justify-self:start;}
+  @media (max-width:700px){#speakForm{grid-template-columns:1fr;}}
+</style>
+<script>
+  document.getElementById("speakForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    var v = function(id){ return document.getElementById(id).value.trim(); };
+    var body = "Name: " + v("sName") + "\nOrganization: " + v("sOrg") + "\nEvent type: " + v("sType") +
+      "\nDate(s): " + (v("sDate") || "Flexible") + "\nLocation: " + v("sPlace") + "\nContact: " + v("sContact") +
+      "\n\nDetails:\n" + v("sDetails");
+    window.location.href = "mailto:cmiller@1team1fightministries.com?subject=" +
+      encodeURIComponent("Speaking / Mentor Request - " + v("sOrg")) + "&body=" + encodeURIComponent(body);
+  });
+</script>
 
 </main>
 <footer class="site-footer" id="contact">

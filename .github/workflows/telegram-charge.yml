@@ -1,0 +1,48 @@
+name: Post Today's Charge to Telegram
+
+on:
+  schedule:
+    # ~6:00 AM Houston every day. Two lines because of daylight saving time;
+    # the script only lets the one that matches Houston's clock post.
+    - cron: "50 10 * * *"   # 5:50 AM CDT (summer)
+    - cron: "50 11 * * *"   # 5:50 AM CST (winter)
+  workflow_dispatch:        # "Run workflow" button = post right now
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/telegram-charge.yml"
+      - ".github/scripts/post-charge.mjs"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: telegram-charge
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Post the charge
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          MODE: ${{ github.event_name == 'schedule' && 'schedule' || (github.event_name == 'push' && 'setup' || 'dispatch') }}
+          CRON: ${{ github.event.schedule }}
+        run: node .github/scripts/post-charge.mjs
+
+      - name: Save the group ID (first run only)
+        run: |
+          if [ -n "$(git status --porcelain .github/telegram-chat.json)" ]; then
+            git config user.name "Standing Orders Bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add .github/telegram-chat.json
+            git commit -m "Save Telegram group for daily charge"
+            git push
+          fi

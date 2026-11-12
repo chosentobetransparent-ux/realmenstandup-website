@@ -121,3 +121,18 @@ if (!res.ok && res.parameters && res.parameters.migrate_to_chat_id) {
 }
 if (!res.ok) fail("Couldn't post: " + res.description + " (Is the bot an admin with permission to post?)");
 console.log(`Posted "${charge.title}" to ${chat.title}.`);
+
+// ---- 5. Today's anime short, if one has been added for this date ----
+const VIDEO = `media/charges/${today}.mp4`;
+if (fs.existsSync(VIDEO)) {
+  const form = new FormData();
+  form.append("chat_id", String(chat.id));
+  form.append("caption", `🎬 Today's Charge: ${charge.title} — watch, then do today's action. #WillTheRealMenPleaseStandUp`);
+  form.append("supports_streaming", "true");
+  form.append("video", new Blob([fs.readFileSync(VIDEO)], { type: "video/mp4" }), `${today}.mp4`);
+  const r = await (await fetch(`https://api.telegram.org/bot${TOKEN}/sendVideo`, { method: "POST", body: form })).json();
+  if (!r.ok) console.error("Video not sent: " + r.description);
+  else console.log(`Sent video ${VIDEO}.`);
+} else {
+  console.log(`No video for ${today} (looked for ${VIDEO}); text only.`);
+}
